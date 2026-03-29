@@ -1,0 +1,129 @@
+.hero {
+  min-height: 100vh; display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  padding: 100px 2rem 60px;
+  position: relative; overflow: hidden;
+  background: linear-gradient(160deg, #fff9f5 0%, #fff 50%, #f0fdff 100%);
+}
+
+/* Blobs decorativos */
+.blob {
+  position: absolute; border-radius: 50%;
+  filter: blur(80px); opacity: 0.35; pointer-events: none;
+}
+.blob1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, #ff6b6b, #ff9a9a);
+  top: -150px; right: -100px;
+}
+.blob2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, #0abde3, #48dbfb);
+  bottom: -100px; left: -80px;
+}
+.blob3 {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, #feca57, #ff9f43);
+  top: 40%; left: 30%; opacity: 0.2;
+}
+
+.container { max-width: 900px; text-align: center; position: relative; z-index: 1; }
+
+.badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 1.8rem; }
+.badge {
+  background: var(--white); border: 1.5px solid var(--gray-300);
+  border-radius: 20px; padding: 0.3rem 1rem;
+  font-size: 0.8rem; color: var(--gray-700); font-weight: 500;
+  box-shadow: var(--shadow-sm);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-weight: 900; color: var(--navy);
+  line-height: 1.15; margin-bottom: 1.4rem;
+}
+.highlight {
+  color: var(--coral); font-style: italic;
+  background: linear-gradient(135deg, var(--coral), #ff9f43);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.subtitle { font-size: 0.75em; color: var(--gray-500); font-weight: 400; font-style: normal; }
+
+.desc {
+  font-size: clamp(0.95rem, 2vw, 1.1rem); color: var(--gray-700);
+  max-width: 680px; margin: 0 auto 2.5rem; line-height: 1.8;
+}
+.desc strong { color: var(--navy); font-weight: 600; }
+
+.cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3.5rem; }
+
+.btnPrimary {
+  background: linear-gradient(135deg, var(--coral), #ff9f43);
+  color: var(--white); text-decoration: none; padding: 0.85rem 2.2rem;
+  border-radius: 50px; font-weight: 700; font-size: 1rem;
+  box-shadow: var(--shadow-coral); transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.01em;
+}
+.btnPrimary:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(255,107,107,0.45); }
+
+.btnSecondary {
+  background: var(--white); color: var(--teal); text-decoration: none;
+  padding: 0.85rem 2.2rem; border-radius: 50px; font-weight: 600; font-size: 1rem;
+  border: 2px solid var(--teal); transition: all 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+.btnSecondary:hover {
+  background: var(--teal); color: var(--white);
+  box-shadow: var(--shadow-teal); transform: translateY(-3px);
+}
+
+/* Stats */
+.statsGrid {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+}
+.statCard {
+  background: var(--white); border-radius: 20px; padding: 1.4rem 2rem;
+  text-align: center; min-width: 160px; box-shadow: var(--shadow-md);
+  border-top: 4px solid transparent; transition: transform 0.2s;
+}
+.statCard:hover { transform: translateY(-4px); }
+.card_coral  { border-top-color: var(--coral); }
+.card_teal   { border-top-color: var(--teal); }
+.card_amber  { border-top-color: var(--amber); }
+.card_emerald{ border-top-color: var(--emerald); }
+
+.statVal {
+  display: block; font-family: var(--font-display);
+  font-size: 2.2rem; font-weight: 700; line-height: 1;
+}
+.coral   { color: var(--coral); }
+.teal    { color: var(--teal); }
+.amber   { color: var(--amber-dark); }
+.emerald { color: var(--emerald); }
+
+.statLabel {
+  display: block; font-size: 0.75rem; color: var(--gray-700);
+  text-transform: uppercase; letter-spacing: 0.07em; margin-top: 0.4rem;
+}
+
+.scrollHint {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  text-align: center; color: var(--gray-300); font-size: 0.72rem;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+.arrow {
+  width: 18px; height: 18px;
+  border-right: 2px solid var(--coral); border-bottom: 2px solid var(--coral);
+  transform: rotate(45deg); animation: bounce 1.5s infinite;
+}
+@keyframes bounce {
+  0%,100% { transform: rotate(45deg) translateY(0); }
+  50%      { transform: rotate(45deg) translateY(5px); }
+}
+
+@media (max-width: 600px) {
+  .statsGrid { flex-direction: column; align-items: center; }
+  .statCard  { width: 100%; max-width: 280px; }
+}

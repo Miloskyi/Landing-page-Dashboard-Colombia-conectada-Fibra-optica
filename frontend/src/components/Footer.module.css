@@ -1,0 +1,15 @@
+.footer { background: var(--navy); padding: 2.5rem 0; border-top: 3px solid var(--coral); }
+.inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; flex-direction: column; align-items: center; gap: 0.8rem; text-align: center; }
+.brand { display: flex; align-items: center; gap: 8px; }
+.brandText { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--white); }
+.brandText em { color: var(--coral); font-style: normal; }
+.copy { font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+.copy a { color: var(--coral-light); text-decoration: none; }
+.copy a:hover { color: var(--coral); }
+.btn {
+  background: linear-gradient(135deg, var(--coral), #ff9f43);
+  color: var(--white); text-decoration: none; padding: 0.6rem 1.6rem;
+  border-radius: 50px; font-weight: 600; font-size: 0.9rem;
+  box-shadow: var(--shadow-coral); transition: transform 0.2s;
+}
+.btn:hover { transform: translateY(-2px); }

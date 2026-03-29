@@ -1,0 +1,48 @@
+.section { padding: 6rem 0; background: var(--white); }
+.container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+.label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.8rem; }
+.title { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: var(--navy); margin-bottom: 1rem; line-height: 1.2; }
+.title em { color: var(--teal); font-style: italic; }
+.sub { font-size: 1rem; color: var(--gray-700); max-width: 580px; line-height: 1.7; margin-bottom: 3rem; }
+
+.timeline { display: flex; flex-direction: column; gap: 1.2rem; position: relative; }
+.timeline::before {
+  content: ''; position: absolute; left: 28px; top: 0; bottom: 0;
+  width: 2px; background: linear-gradient(to bottom, var(--coral), var(--teal), var(--amber), var(--emerald), var(--purple));
+  opacity: 0.3;
+}
+
+.item { display: flex; gap: 1.5rem; align-items: flex-start; }
+
+.numBadge {
+  flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-weight: 700; font-size: 0.9rem;
+  color: var(--white); z-index: 1; box-shadow: var(--shadow-md);
+}
+.coral   { background: linear-gradient(135deg, var(--coral), #ff9f43); }
+.teal    { background: linear-gradient(135deg, var(--teal), var(--teal-dark)); }
+.amber   { background: linear-gradient(135deg, var(--amber), #ff9f43); }
+.emerald { background: linear-gradient(135deg, var(--emerald), #00b894); }
+.purple  { background: linear-gradient(135deg, var(--purple), #6c5ce7); }
+
+.body {
+  background: var(--warm-gray); border-radius: 16px; padding: 1.4rem 1.6rem;
+  flex: 1; border-left: 3px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.item:hover .body { box-shadow: var(--shadow-md); }
+
+.stepTitle { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--navy); margin-bottom: 0.4rem; }
+.stepText  { font-size: 0.86rem; color: var(--gray-700); line-height: 1.65; margin-bottom: 0.8rem; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  border-radius: 6px; padding: 0.2rem 0.65rem;
+  font-size: 0.72rem; font-weight: 600; font-family: var(--font-mono);
+}
+.coralTag   { background: rgba(255,107,107,0.12); color: var(--coral-dark); }
+.tealTag    { background: rgba(10,189,227,0.12);  color: var(--teal-dark); }
+.amberTag   { background: rgba(254,202,87,0.2);   color: #b8860b; }
+.emeraldTag { background: rgba(29,209,161,0.12);  color: #00a884; }
+.purpleTag  { background: rgba(162,155,254,0.15); color: #6c5ce7; }

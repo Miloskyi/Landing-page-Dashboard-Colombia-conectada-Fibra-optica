@@ -1,0 +1,54 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Paleta vibrante — Coral + Teal + Amber sobre blanco cálido */
+  --coral:       #ff6b6b;
+  --coral-dark:  #e85555;
+  --coral-light: #ff9a9a;
+  --teal:        #0abde3;
+  --teal-dark:   #0097c4;
+  --teal-light:  #48dbfb;
+  --amber:       #feca57;
+  --amber-dark:  #e6a817;
+  --emerald:     #1dd1a1;
+  --purple:      #a29bfe;
+  --navy:        #1a1a2e;
+  --navy-mid:    #16213e;
+  --navy-light:  #0f3460;
+  --cream:       #fefefe;
+  --warm-gray:   #f8f4f0;
+  --gray-100:    #f1f1f1;
+  --gray-300:    #c0c0c0;
+  --gray-500:    #3d3d3d;
+  --gray-700:    #1a1a1a;
+  --white:       #ffffff;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'Space Grotesk', monospace;
+
+  --shadow-sm:    0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md:    0 8px 32px rgba(0,0,0,0.12);
+  --shadow-lg:    0 20px 60px rgba(0,0,0,0.15);
+  --shadow-coral: 0 8px 32px rgba(255,107,107,0.3);
+  --shadow-teal:  0 8px 32px rgba(10,189,227,0.3);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--gray-700);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { width: 100%; }
+
+::selection { background: var(--coral-light); color: var(--white); }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--gray-100); }
+::-webkit-scrollbar-thumb { background: var(--coral); border-radius: 3px; }
